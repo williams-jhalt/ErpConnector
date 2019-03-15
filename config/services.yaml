@@ -25,3 +25,10 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    App\Service\ErpOneConnector:
+        arguments:
+            $server: '%env(ERP_SERVER)%'
+            $username: '%env(ERP_USERNAME)%'
+            $password: '%env(ERP_PASSWORD)%'
+            $appname: '%env(ERP_APPNAME)%'

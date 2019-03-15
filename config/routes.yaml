@@ -1,3 +1,27 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+index:
+    path: /
+    controller: App\Controller\DefaultController::index
+
+list_products:
+    path: /api/{company}/product
+    controller: App\Controller\ProductController::index
+
+find_product:
+    path: /api/{company}/product/{itemNumber}
+    controller: App\Controller\ProductController::find
+
+list_customers:
+    path: /api/{company}/customer
+    controller: App\Controller\CustomerController::index
+
+find_customer:
+    path: /api/{company}/customer/{customerNumber}
+    controller: App\Controller\CustomerController::find
+
+list_sales_people:
+    path: /api/{company}/salesperson
+    controller: App\Controller\SalesPersonController::index
+
+find_salesperson:
+    path: /api/{company}/salesperson/{id}
+    controller: App\Controller\SalesPersonController::find
