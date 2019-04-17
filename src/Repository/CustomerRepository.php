@@ -3,7 +3,6 @@
 namespace App\Repository;
 
 use App\Model\Customer;
-use App\Model\Product;
 use App\Service\ErpOneConnector;
 
 /**
@@ -25,7 +24,7 @@ class CustomerRepository {
      * 
      * @param integer $limit
      * @param integer $offset
-     * @return Product[]
+     * @return Customer[]
      */
     public function getItems($company, int $limit = 100, int $offset = 0) {
 
@@ -66,7 +65,7 @@ class CustomerRepository {
      * @param string $searchTerms
      * @param integer $limit
      * @param integer $offset
-     * @return Product[]
+     * @return Customer[]
      */
     public function searchItems(string $company, string $searchTerms, int $limit = 100, int $offset = 0) {
 
@@ -106,7 +105,7 @@ class CustomerRepository {
      * id can be either the item number or barcode
      * 
      * @param string $customerNumber
-     * @return Product
+     * @return Customer
      */
     public function getItem(string $company, string $customerNumber) {
 
