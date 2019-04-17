@@ -18,6 +18,14 @@ find_customer:
     path: /api/{company}/customer/{customerNumber}
     controller: App\Controller\CustomerController::find
 
+list_vendors:
+    path: /api/{company}/vendor
+    controller: App\Controller\VendorController::index
+
+find_vendor:
+    path: /api/{company}/vendor/{vendorNumber}
+    controller: App\Controller\VendorController::find
+
 list_sales_people:
     path: /api/{company}/salesperson
     controller: App\Controller\SalesPersonController::index
