@@ -106,7 +106,7 @@ class VendorRepository {
     private function _buildFromErp($erpItem) {
         
         $t = new Vendor();
-        $t->setCustomerNumber($erpItem->vendor_vendor);
+        $t->setVendorNumber($erpItem->vendor_vendor);
         $t->setName($erpItem->vendor_name);
         $t->setEmail($erpItem->vendor_email_address);
         
