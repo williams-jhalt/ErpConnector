@@ -35,6 +35,6 @@ find_salesperson:
     controller: App\Controller\SalesPersonController::find
     
 get_pdf:
-    path: /api/{company}/pdf/{type}
+    path: /api/{company}/pdf/{type}/{record}/{sequence}
     controller: App\Controller\DefaultController::pdf
     
