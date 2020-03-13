@@ -8,15 +8,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 class DefaultController extends AbstractController {
 
-    /**
-     * @var ErpOneConnector
-     */
-    private $service;
-
-    public function __construct(ErpOneConnector $service) {
-        $this->service = $service;
-    }
-
+    
     public function index() {
         
         return $this->render('default/index.html.twig');
@@ -26,7 +18,7 @@ class DefaultController extends AbstractController {
     /**
      * Returns BASE64 encoded PDF document
      */
-    public function pdf($company, $type, $record, $sequence) {
+    public function pdf($company, $type, $record, $sequence, ErpOneConnector $service) {
         
         $company = filter_var($company, FILTER_SANITIZE_STRING);
         
