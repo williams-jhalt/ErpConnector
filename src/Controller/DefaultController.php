@@ -22,7 +22,7 @@ class DefaultController extends AbstractController {
         
         $company = filter_var($company, FILTER_SANITIZE_STRING);
         
-        $response = $this->service->getPdf($company, $type, $record, (int) $sequence);
+        $response = $service->getPdf($company, $type, $record, (int) $sequence);
         
         return new Response($response->document);
         
