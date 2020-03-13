@@ -33,3 +33,8 @@ list_sales_people:
 find_salesperson:
     path: /api/{company}/salesperson/{id}
     controller: App\Controller\SalesPersonController::find
+    
+get_pdf:
+    path: /api/{company}/pdf
+    controller: App\Controller\DefaultController::pdf
+    
